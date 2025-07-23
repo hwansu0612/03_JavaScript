@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습문제 기초 1탄</title>
+  </head>
+  <body>
+    <h1>실습문제 기초 1탄</h1>
+    <h3>문제 1: 기본 알림창 뛰우기</h3>
+    <button type="button" onclick="첫번째함수()">클릭해보세요!</button>
+    <script>
+      function 첫번째함수() {
+        alert("안녕하세요!");
+      }
+    </script>
+    <h2>문제 2: 텍스트 변경하기</h2>
+    <button type="button" onclick="텍스트변경()">텍스트 바꾸기</button>
+    <div id="메시지영역">여기 텍스트가 바뀔 예정입니다.</div>
+    <script>
+      function 텍스트변경() {
+        document.getElementById("메시지영역").innerHTML = "새로운 메시지!";
+      }
+    </script>
+    <h3>문제 3: 배경색 경하기</h3>
+    <button type="button" onclick="배경색변경('pink')">분홍색</button>
+    <button type="button" onclick="배경색변경('lightgreen')">연두색</button>
+    <button type="button" onclick="배경색변경('lightyellow')">노란색</button>
+    <button type="button" onclick="배경색변경('white')">원래색</button>
+    <script>
+      const 몸체 = document.querySelector("body");
+
+      function 배경색변경(색상) {
+        몸체.style.backgroundColor = 색상;
+      }
+    </script>
+    <h3>문제 4: 이름 입력받고 인사하기</h3>
+    <input type="text" id="이름입력" placeholder="이름을 입력하세요" />
+    <button type="button" onclick="인사하기()">인사하기</button>
+    <div id="인사결과"></div>
+    <script>
+      function 인사하기() {
+        let 이름 = document.getElementById("이름입력").value;
+        document.getElementById("인사결과").innerHTML =
+          "안녕하세요, " + 이름 + "님!";
+      }
+    </script>
+    <h2>문제 5: 간단한 계산기</h2>
+    <p><strong>목표:</strong> 두 숫자를 입력받아서 계산 결과를 보여주세요.</p>
+    <input type="number" id="숫자1" placeholder="첫 번째 숫자" />
+    <input type="number" id="숫자2" placeholder="두 번째 숫자" />
+    <br /><br />
+    <button type="button" onclick="계산하기('+')">더하기</button>
+    <button type="button" onclick="계산하기('-')">빼기</button>
+    <button type="button" onclick="계산하기('*')">곱하기</button>
+    <div id="계산결과" class="output"></div>
+    <script>
+      function 계산하기(연산자) {
+        let 첫번째 = Number(document.getElementById("숫자1").value);
+        let 두번째 = Number(document.getElementById("숫자2").value);
+        let 결과 = 0;
+
+        if (연산자 === "+") {
+          결과 = 첫번째 + 두번째;
+        } else if (연산자 === "-") {
+          결과 = 첫번째 - 두번째;
+        } else if (연산자 === "*") {
+          결과 = 첫번째 * 두번째;
+        }
+
+        document.getElementById("계산결과").innerHTML =
+          첫번째 + " " + 연산자 + " " + 두번째 + " = " + 결과;
+      }
+    </script>
+  </body>
+</html>

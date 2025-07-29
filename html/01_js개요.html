@@ -85,24 +85,17 @@
     <h1>JS 맛보기</h1>
     <button type="button" onclick="밝음모드()">라이트 모드</button>
     <button type="button" onclick="어두움모드()">다크 모드</button>
+
+    <h1>매개변수로 색상 변경하기 맛보기</h1>
+    <button type="button" onclick="블루모드('lightblue')">파란색 모드</button>
     <script>
-      /* JS 맛보기 */
-      // 버튼 클릭 시 body 태그의 글자색, 배경색을 변경
-
-      const body = document.querySelector("body"); // 웹 페이지 문서 내에서.선택할 것(바디태그를)
-
-        /* 버튼에 장착된 기능 실행하면 다크모드로 바꾸는 기능(함수) 설정 */
-        function 어두움모드() {
-            body.style.color = "white" ;
-            // body 태그 안에 존재하는 스타일에서 글자색상을 흰색으로 변경을
-            // body 태그 안에 존재하는 스트일에서 배경색상을 검정색으로 변경하겠다.
-                }
-                /* 버튼에 장착된 기능 실행하면 라이트모드로 바꾸는 기능(함수) 설정
-                글자색상 = 검정 배경색상 = 희색
-                */
-               function 밝음모드() {
-                body.style.color =
-               }
+      const 바디 = document.querySelector("body"); //body 태그 내 정보를 바디 라는 이름에 담아주기
+      //  위 버튼에서 전달받은 'lightblue' 컬러가
+      // 색상 이라는 변수이름에 담겨지고
+      // 담겨진 'lightblue' 는 배경색상으로 변경
+      function 블루모드(색상) {
+        바디.style.backgroundColor = 색상;
+      }
     </script>
     <script src="../js/01_JS개요.js"></script>
   </body>

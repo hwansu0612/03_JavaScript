@@ -7,59 +7,34 @@
   </head>
   <body>
     <h1>비교 연산자</h1>
-    <!-- (==, !=, >, <, >= )-->
+    <!-- (==, !=, >, <, >=, <= ) -->
 
     <pre>
         - 좌변과 우변을
         같다, 같지 않다, 초과, 미만, 이상, 이하 비교해서
-        맞을 경우 true, 아닐 경우 false 값을 반환하는 03_연산자
-        (연산 결과로 boolean(노리 값)을 반환하는 연산자)
+        맞을 경우 true, 아닐 경우 false 값을 반환하는 연산자
+        (연산 결과로 boolean(논리 값)을 반환)
 
-        -복합 기호를 사용할 때 등호(=) 는 무조건 오른쪽에 작성
-         = equal 영어 사용
+        - 복합 기호를 사용할 때 등호(=) 는 무조건 오른쪽에 작성
+          = equal 영어 사용
     </pre>
 
     <hr />
-    <h3>입력된 두 수가 같은지 확인</h3>
-    <div>
-      <label>
-        1번 :
-        <input type="=text" id="comValue1" /><br />
-        2번 :
-        <input type="text" id="comValue2" /><br />
+    <h3>
+      입력된 두 수가 같은지 확인
+      <div>
+        <label>
+          1번 :
+          <input type="text" id="comValue1" /><br />
+        </label>
+        <label>
+          2번 :
+          <input type="text" id="comValue2" /><br />
+        </label>
         <button id="btn1" onclick="비교기능1번()">비교하기</button>
         <span id="result1"></span>
-      </label>
-    </div>
-
-    <script>
-      // 두 수가 같은지 비교
-      // 1. cv1 변수이름에 comValue1 을 바라보는 요소 설정
-      const cv1 = document.getElementById("comValue1");
-      // 2. cv2 변수이름에 comValue2 을 바라보는 요소 설정
-      const cv2 = document.getElementById("comValue2");
-      // 3. result1 변수 이름에 result1 을 바라보는 요소 설정
-      const result1 = document.getElementById("result1");
-
-      // 4. 비교기능1번() 기능 내부에서 cv1 과 cv2 의 value 값을 가져오는
-      function 비교기능1번() {
-        const v1 = cv1.value;
-        const v2 = cv2.value;
-        //    v1 v2 변수이름 설정
-        // 5. innerText 로 ( v1 == v2 ) 값이 같을경우 다를경우 결과 확인
-        result1.innerText = v1 == v2;
-        /*
-        == (equa1): 두 자리의 값이 다른지 같은지에 대해서 비교
-             오직 값 만 비교
-             자료형이 다르더라도 암목적으로 형 변환을 하여 비교
-             ===(strict equal) : 두 자리 이상의 값들이 
-
-        equal
-
-
-
-         */
-      }
-    </script>
+      </div>
+    </h3>
+    <script src="../js/03_연산자2.js"></script>
   </body>
 </html>
